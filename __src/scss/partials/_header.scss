@@ -8,6 +8,10 @@
 		left: 0;
 		width: 100%;
 
+		@include laptop {
+			padding: 0;
+		}
+
 		.container {
 			padding: 0 10px;
 			display: flex;
@@ -17,6 +21,11 @@
 
 		img {
 			max-height: 40px;
+
+			@include laptop {
+				max-height: 70px;
+				height: 70px;
+			}
 		}
 
 		.main-navigation {
@@ -29,13 +38,23 @@
 			background-color: $light-gray;
 			display: none;
 
+			@include laptop {
+				position: static;
+				display: block;
+				padding: 0;
+				border: 0;
+				margin-left: 30px;
+			}
+
 			ul {
 				@extend .list-unstyled;
 
+				@include laptop {
+					display: flex;
+				}
+
 				li {
 
-					&:hover,
-					&:focus,
 					&.current-menu-item {
 						& > a {
 							border-color: $dark-gray;
@@ -45,13 +64,21 @@
 					&.menu-item-has-children {
 						background: transparent url('../images/material-arrow.svg') no-repeat right 10px top 5px;
 
-						&.open {
+						@include laptop {
+							background-position: right center;
 
+							& > a {
+								padding-right: 30px;
+							}
 						}
 					}
 
 					& + li {
 						margin-top: 10px;
+
+						@include laptop {
+							margin: 0 10px 0 0;
+						}
 					}
 
 					a {
@@ -60,12 +87,42 @@
 						color: $dark-gray;
 						text-decoration: none;
 						border-left: 3px solid transparent;
+
+						&:hover,
+						&:focus {
+							border-color: $dark-gray;
+						}
+
+						@include laptop {
+							padding: 0 15px;
+							height: 90px;
+							line-height: 90px;
+							border-left: 0;
+							border-bottom: 3px solid transparent;
+						}
 					}
 				}
 
 				.sub-menu {
 					margin-top: 10px;
 					display: none;
+					background-color: $light-gray;
+
+					@include laptop {
+						position: absolute;
+						border-top: 1px solid $gray;
+						margin: 0;
+
+						li + li {
+							margin: 0;
+						}
+
+						a {
+							line-height: normal;
+							height: auto;
+							padding: 15px;
+						}
+					}
 				}
 			}
 		}
@@ -107,6 +164,10 @@
 
 		.menu-toggle {
 			margin-left: 10px;
+
+			@include laptop {
+				display: none;
+			}
 
 			button {
 				border: 0;

@@ -9,7 +9,8 @@
 
 		} );
 
-	$( '.main-navigation .menu-item-has-children' ).on( 'click', function ( e ) {
+	$( '.main-navigation .menu-item-has-children' )
+		.on( 'click', function ( e ) {
 		e.preventDefault();
 
 		$( this ).find( '.sub-menu' ).slideToggle();
