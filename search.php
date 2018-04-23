@@ -5,20 +5,20 @@
 
 	<?php if ( have_posts() ) : ?>
 
+		<header class="page-header">
+			<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: "%s"', 'starter_theme' ), get_search_query() ); ?></h1>
+		</header>
+
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<article id="page-<?php the_ID(); ?>" class="<?php post_class(); ?>">
+			<article id="post-<?php the_ID(); ?>" class="<?php post_class(); ?>">
 				<header class="entry-header">
-					<h1 class="entry-title"><?php the_title(); ?></h1>
+					<h2 class="entry-title"><?php the_title(); ?></h2>
 				</header>
 				<div class="entry-content">
-					<?php the_content(); ?>
+					<?php the_excerpt(); ?>
 				</div>
 			</article>
-
-			<?php if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif; ?>
 
 		<?php endwhile; ?>
 
@@ -30,9 +30,5 @@
 
 </main>
 <!-- /CONTENT -->
-
-<!-- SIDEBAR -->
-<?php get_sidebar(); ?>
-<!-- /SIDEBAR -->
 
 <?php get_footer(); ?>
