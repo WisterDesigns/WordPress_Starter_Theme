@@ -90,6 +90,12 @@ class Theme {
 		# Custom Logo
 		add_theme_support( 'custom-logo' );
 
+		# WooCommerce Support
+		add_theme_support( 'woocommerce' );
+		add_theme_support( 'wc-product-gallery-slider' );
+		add_theme_support( 'wc-product-gallery-zoom' );
+		add_theme_support( 'wc-product-gallery-lightbox' );
+
 	}
 
 
