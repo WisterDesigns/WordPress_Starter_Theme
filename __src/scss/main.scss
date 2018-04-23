@@ -1,0 +1,58 @@
+/* Common */
+@import "variables";
+@import "colors";
+@import "mixins";
+
+/* General */
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+img:not([src*=".svg"]) {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	transition: all .3s ease;
+}
+
+.sr-only {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.container {
+	padding: 0 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	@include mobile {
+		padding: 0 30px;
+	}
+
+	@include tablet {
+		padding: 0 45px;
+	}
+}
+
+/* Vendor */
+@import "vendor/normalize";
+
+/* Partials */
+@import "partials/header";
+@import "partials/sidebar";
+@import "partials/footer";
+
+/* Pages */
+@import "pages/homepage";
