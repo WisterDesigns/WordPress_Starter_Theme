@@ -10,6 +10,12 @@ body.rtl {
 			}
 
 			.main-navigation {
+
+				@include laptop {
+					margin-right: 30px;
+					margin-left: 0;
+				}
+
 				ul {
 					li {
 
