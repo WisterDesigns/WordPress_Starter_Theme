@@ -1,0 +1,24 @@
+{
+  "name": "wordpress_starter_theme",
+  "version": "1.0.0",
+  "description": "WordPress starter theme.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dorzki/WordPress_Starter_Theme.git"
+  },
+  "keywords": [
+    "WordPress",
+    "Gulp",
+    "SCSS"
+  ],
+  "author": "Dor Zuberi (dorzki)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dorzki/WordPress_Starter_Theme/issues"
+  },
+  "homepage": "https://github.com/dorzki/WordPress_Starter_Theme#readme"
+}
