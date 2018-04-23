@@ -1,24 +1,34 @@
 {
-  "name": "wordpress_starter_theme",
-  "version": "1.0.0",
-  "description": "WordPress starter theme.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name" : "wordpress_starter_theme",
+  "version" : "1.0.0",
+  "description" : "WordPress starter theme.",
+  "main" : "index.js",
+  "scripts" : {
+	"test" : "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dorzki/WordPress_Starter_Theme.git"
+  "repository" : {
+	"type" : "git",
+	"url" : "git+https://github.com/dorzki/WordPress_Starter_Theme.git"
   },
-  "keywords": [
-    "WordPress",
-    "Gulp",
-    "SCSS"
+  "keywords" : [
+	"WordPress",
+	"Gulp",
+	"SCSS"
   ],
-  "author": "Dor Zuberi (dorzki)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dorzki/WordPress_Starter_Theme/issues"
+  "author" : "Dor Zuberi (dorzki)",
+  "license" : "ISC",
+  "bugs" : {
+	"url" : "https://github.com/dorzki/WordPress_Starter_Theme/issues"
   },
-  "homepage": "https://github.com/dorzki/WordPress_Starter_Theme#readme"
+  "homepage" : "https://github.com/dorzki/WordPress_Starter_Theme#readme",
+  "devDependencies" : {
+	"browser-sync" : "^2.23.7",
+	"gulp" : "^3.9.1",
+	"gulp-autoprefixer" : "^5.0.0",
+	"gulp-concat" : "^2.6.1",
+	"gulp-plumber" : "^1.2.0",
+	"gulp-sass" : "^4.0.1",
+	"gulp-uglify" : "^3.0.0"
+  },
+  "dependencies" : {}
 }
