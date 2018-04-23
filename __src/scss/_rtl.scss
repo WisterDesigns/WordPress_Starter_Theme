@@ -1,0 +1,53 @@
+/* RTL */
+body.rtl {
+	direction: rtl;
+
+	.site-header {
+		.header-strip {
+			.menu-toggle {
+				margin-left: 0;
+				margin-right: 10px;
+			}
+
+			.main-navigation {
+				ul {
+					li {
+
+						&.current-menu-item {
+							& > a {
+								border-color: $dark-gray;
+							}
+						}
+
+						&.menu-item-has-children {
+							background-position: left 10px top 5px;
+
+							@include laptop {
+								background-position: left center;
+
+								& > a {
+									padding-right: 15px;
+									padding-left: 30px;
+								}
+							}
+						}
+
+						a {
+							border-left: 0;
+							border-right: 3px solid transparent;
+
+							@include laptop {
+								border-right: 0;
+							}
+
+							&:hover,
+							&:focus {
+								border-color: $dark-gray;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
