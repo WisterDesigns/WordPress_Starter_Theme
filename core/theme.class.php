@@ -67,7 +67,7 @@ class Theme {
 	public function theme_capabilities() {
 
 		# i18n & l10n
-		load_theme_textdomain( 'starter_theme' );
+		load_theme_textdomain( 'starter_theme', get_template_directory() . '/languages' );
 
 		# Title Tag
 		add_theme_support( 'title-tag' );
@@ -253,6 +253,10 @@ class Theme {
 
 		# Theme JS
 		wp_enqueue_script( self::SLUG . '_js', get_theme_file_uri( 'assets/js/scripts.min.js' ), [ 'jquery' ], self::VERSION, true );
+
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
 
 	}
 

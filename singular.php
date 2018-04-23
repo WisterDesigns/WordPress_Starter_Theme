@@ -27,4 +27,8 @@
 </main>
 <!-- /CONTENT -->
 
+<!-- SIDEBAR -->
+<?php get_sidebar(); ?>
+<!-- /SIDEBAR -->
+
 <?php get_footer(); ?>
