@@ -11,6 +11,13 @@
 	text-rendering: optimizeLegibility;
 }
 
+body,
+input,
+button,
+textarea {
+	font-family: 'Assistant', sans-serif;
+}
+
 img:not([src*=".svg"]) {
 	display: block;
 	max-width: 100%;
@@ -21,6 +28,7 @@ a {
 	transition: all .3s ease;
 }
 
+.screen-reader-text,
 .sr-only {
 	border: 0;
 	clip: rect(0, 0, 0, 0);
