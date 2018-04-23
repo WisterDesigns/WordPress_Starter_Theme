@@ -79,7 +79,16 @@ class Theme {
 		add_theme_support( 'post-thumbnails' );
 
 		# HTML5 Output
-		add_theme_support( 'html5', [ 'search-form', 'gallery', 'caption' ] );
+		add_theme_support( 'html5', [
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		] );
+
+		# Custom Logo
+		add_theme_support( 'custom-logo' );
 
 	}
 
@@ -222,7 +231,7 @@ class Theme {
 		wp_enqueue_style( 'google_fonts', '//fonts.googleapis.com/css?family=Assistant:300,400,700&amp;subset=hebrew' );
 
 		# Theme CSS
-		wp_enqueue_style( self::SLUG . '_css', get_theme_file_uri( 'assets/css/styles.min.css' ), [ 'google_fonts' ], self::VERSION );
+		wp_enqueue_style( self::SLUG . '_css', get_theme_file_uri( 'assets/css/styles.min.css' ), [ 'google_fonts', 'dashicons' ], self::VERSION );
 
 	}
 

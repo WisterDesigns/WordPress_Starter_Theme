@@ -18,7 +18,13 @@ textarea {
 	font-family: 'Assistant', sans-serif;
 }
 
-img:not([src*=".svg"]) {
+body {
+	&.rtl {
+		direction: rtl;
+	}
+}
+
+img {
 	display: block;
 	max-width: 100%;
 	height: auto;
@@ -52,6 +58,12 @@ a {
 	@include tablet {
 		padding: 0 45px;
 	}
+}
+
+.list-unstyled {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 /* Vendor */

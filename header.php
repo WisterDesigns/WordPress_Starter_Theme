@@ -16,5 +16,11 @@
 <?php do_action( 'after_body_open' ); ?>
 
 <!-- HEADER -->
-<header id="masthead" class="site-header"></header>
+<header id="masthead" class="site-header">
+
+	<!-- Mobile Strip -->
+	<?php get_template_part( 'template-parts/header/menu' ); ?>
+	<!-- /Mobile Strip -->
+
+</header>
 <!-- /HEADER -->

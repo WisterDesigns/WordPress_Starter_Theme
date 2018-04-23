@@ -1,1 +1,137 @@
 /* Header */
+.site-header {
+	.header-strip {
+		background-color: $light-gray;
+		position: fixed;
+		padding: 10px 0;
+		top: 0;
+		left: 0;
+		width: 100%;
+
+		.container {
+			padding: 0 10px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		img {
+			max-height: 40px;
+		}
+
+		.main-navigation {
+			position: absolute;
+			top: 60px;
+			left: 0;
+			width: 100%;
+			border-top: 1px solid $gray;
+			padding: 10px 0;
+			background-color: $light-gray;
+			display: none;
+
+			ul {
+				@extend .list-unstyled;
+
+				li {
+
+					&:hover,
+					&:focus,
+					&.current-menu-item {
+						& > a {
+							border-color: $dark-gray;
+						}
+					}
+
+					&.menu-item-has-children {
+						background: transparent url('../images/material-arrow.svg') no-repeat right 10px top 5px;
+
+						&.open {
+
+						}
+					}
+
+					& + li {
+						margin-top: 10px;
+					}
+
+					a {
+						display: block;
+						padding: 7px 20px;
+						color: $dark-gray;
+						text-decoration: none;
+						border-left: 3px solid transparent;
+					}
+				}
+
+				.sub-menu {
+					margin-top: 10px;
+					display: none;
+				}
+			}
+		}
+
+		.mobile-actions {
+			display: flex;
+			align-items: center;
+		}
+
+		.cart-icon {
+			position: relative;
+
+			a {
+				color: $dark-gray;
+				text-decoration: none;
+
+				.dashicons {
+					font-size: 28px;
+					width: 28px;
+					height: 28px;
+				}
+
+				.badge {
+					position: absolute;
+					top: -5px;
+					right: -5px;
+					font-size: 14px;
+					display: block;
+					background-color: $main-color;
+					z-index: 10;
+					width: 16px;
+					height: 16px;
+					text-align: center;
+					border-radius: 25px;
+					color: #ffffff;
+				}
+			}
+		}
+
+		.menu-toggle {
+			margin-left: 10px;
+
+			button {
+				border: 0;
+				padding: 8px;
+				margin: 0;
+				background-color: transparent;
+				transition: background-color .3s ease;
+
+				&:hover,
+				&:focus,
+				&:active {
+					background-color: $gray;
+				}
+
+				.bar {
+					display: block;
+					width: 24px;
+					height: 2px;
+					background-color: $dark-gray;
+
+					& + .bar {
+						margin-top: 5px;
+					}
+				}
+			}
+		}
+	}
+}
